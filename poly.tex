@@ -140,20 +140,66 @@
 \newpage
 \setcounter{page}{1}
 
-\section{Les Gestionnaires de versions}
-Un gestionnaire de version est un outil permettant de maintenir plusieurs version,
-c'est a dire qu'il est capable d'enregistrer les différents états d'un fichier au cours du temps et de naviguer facilement entres ces états.
-\\
-Il en existe plusieurs, les plus connu étant \emph{CVS}, \emph{SVN} et \emph{Git}.
-Nous nous intéresserons uniquement à ce dernier qui est notamment utilisé pour la réalisation de Linux.
+\part{Introduction}
 
-\section{Git un gestionnaire décentralisé}
-Git à la particularité, contrairement à d'autre gestionnaire de version d'être décentralisé, c'est a dire qu'il n'a pas besoin d'un serveur pour fonctionner.
-Cependant pour des raisons de simplicité il est souvent utilisé de cette manière. %TODO ref plus loin
-\\
-Chaque personne possède un dépôt privé, et un dépôt public.
-Le dépôt privé sert a faire du développement local, et le public sert a envoyé des versions du code source afin que d'autres personnes puissent les télécharger.
-En donnant a tout un groupe le même dépôt public, nous obtenons un système centralisé.
+\section{Les gestionnaires de versions}
+
+\paragraph{} Un gestionnaire de version est un outil permettant de maintenir
+plusieurs versions, c'est-à-dire qu'il est capable d'enregistrer les différents
+états d'un ou de plusieurs fichiers au cours du temps et de naviguer facilement
+entres ces états.
+
+\paragraph{} Il en existe plusieurs, les plus connus étant \emph{CVS},
+\emph{SVN} et \emph{Git}.  Nous nous intéresserons uniquement à ce dernier qui
+est notamment utilisé pour la réalisation de Linux.
+
+\section{Git, un gestionnaire décentralisé}
+
+\paragraph{} Git à la particularité, contrairement à d'autres gestionnaires de
+version d'être décentralisé, c'est à dire qu'il n'a pas besoin d'un serveur
+pour fonctionner.  Cependant pour des raisons de simplicité il est souvent
+utilisé de cette manière.
+%TODO ref plus loin
+
+\paragraph{} Chaque personne possède un dépôt privé, et un dépôt public.  Le
+dépôt privé sert à faire du développement local, et le public sert à envoyer
+des versions du code source afin que d'autres personnes puissent les
+télécharger.  En donnant à tout un groupe le même dépôt public, nous obtenons
+un système centralisé.
+
+\part{Création de dépôt local}
+
+\section{Clonage}
+
+\paragraph{} La manière la plus fréquente de créer un dépôt
+(\emph{repository}) Git est le ``clonage''~: la copie entière d'un projet géré
+avec Git. Si l'on prends par exemple le projet de ce cours même qui est stocké
+sur \href{https://github.com}{GitHub} à l'adresse
+\url{https://github.com/ClubNix/git}, il suffit de taper la commande suivante
+pour copier le projet entier dans le dossier courant~:
+
+\begin{lstlisting}
+$ git clone https://github.com/ClubNix/git
+\end{lstlisting}
+
+\paragraph{} Il aussi possible de manière facultative de spécifier dans quel
+dépôt le clonage va se faire~:
+
+\begin{lstlisting}
+$ git clone https://github.com/ClubNix/git dossier
+\end{lstlisting}
+
+\section{Création d'un dépôt vide}
+
+\paragraph{} Il est bien sûr possible avec Git de créer un dépôt vide. Pour
+cela, il suffit de faire~:
+
+\begin{lstlisting}
+$ git init
+\end{lstlisting}
+
+\paragraph{} Cela va tout simplement ajouter les fichiers propres à Git dans le
+répertoire courant et ainsi d'initialiser la gestion de version.
 
 %TODO biblio
 %
@@ -161,3 +207,4 @@ En donnant a tout un groupe le même dépôt public, nous obtenons un système c
 % http://rogerdudler.github.io/git-guide/
 % http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide#320140
 \end{document}
+% vim: spell : spelllang=fr
