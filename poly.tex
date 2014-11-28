@@ -201,10 +201,37 @@ $ git init
 \paragraph{} Cela va tout simplement ajouter les fichiers propres à Git dans le
 répertoire courant et ainsi d'initialiser la gestion de version.
 
+\part{Exemple d'un workflow avec Git}
+
+\paragraph{} Avec Git, un workflow courant, est constitué de 4 étapes : la
+modification, la validation, le commit et l'envoi. Nous allons voir chacune des
+étapes dans cette partie.
+
+\section{Modification}
+
+\paragraph{} La modification est tout simplement le moment pendant lequel les
+fichiers (de code, etc\dots) sont modifiés. C'est la partie qui semble la plus
+simple dans la gestion de version. Cependant, afin d'exploiter la gestion de
+version à son plein potentiel, certaines règles doivent être respectées.
+
+\paragraph{} Premièrement, Git analyse les différents changement en faisant des
+``diff'', qui consistent à regarder le différences entre un même fichier à des
+versions différentes. Ainsi, afin de clarifier un peu le tout, il est conseillé
+de préférer du texte dur plusieurs ligne que du texte sur une seule ligne.
+
+\paragraph{} Ensuite, afin de pouvoir mieux gérer son dépôt mais aussi de mieux
+gérer la stabilité et la fonctionnalité du projet, il est aussi conseillé de
+maximiser le nombre de version et d'en valider une aussitôt que le projet
+``fonctionne''. Cela facilitera grandement la détection et la résolution
+d'erreurs mais aussi le travail avec le branche que l'on verra plus tard.
+
 %TODO biblio
 %
 % http://git-scm.com <- réference
 % http://rogerdudler.github.io/git-guide/
 % http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide#320140
+%
+%TODO
+% Explain why `git init --bare' if on own server
 \end{document}
 % vim: spell : spelllang=fr
