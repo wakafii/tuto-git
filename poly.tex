@@ -3,10 +3,10 @@
 
 \usepackage{a4wide}
 %\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
-\raggedbottom % prevents vertical white space on pages that cannot be filled properly
+\raggedbottom%  Prevents vertical white space on pages that cannot be filled properly
 
 \usepackage{hyperref}
-\hypersetup{
+\hypersetup{%
 	colorlinks=true,       	% false: boxed links; true: colored links
 	linkcolor=black,          	% color of internal links
 	urlcolor=blue,           	% color of external links
@@ -45,7 +45,7 @@
 \definecolor{grey2}{rgb}{0.3,0.3,0.3}
 
 %% Define listings params %%
-\lstset{
+\lstset{%
 %	numbers=left,
 	language=bash,
 	tabsize=4,
@@ -68,12 +68,12 @@
 		{é}{{\'{e}}}1
 		{è}{{\`{e}}}1
 		{ê}{{\^{e}}}1
-		{ë}{{\¨{e}}}1
+		{ë}{{\"{e}}}1
 		{û}{{\^{u}}}1
 		{ù}{{\`{u}}}1
 		{â}{{\^{a}}}1
 		{à}{{\`{a}}}1
-		{î}{{\^{i}}}1
+		{î}{{\^{\i}}}1
 		{ç}{{\c{c}}}1
 		{Ç}{{\c{C}}}1
 		{É}{{\'{E}}}1
@@ -111,7 +111,7 @@
 
 \renewcommand{\qedsymbol}{}
 
-\newcommand{\petit}[1]{
+\newcommand{\petit}[1]{%
 	\medskip \noindent
 	\begin{small}
 	#1)
@@ -217,7 +217,7 @@ version à son plein potentiel, certaines règles doivent être respectées.
 \paragraph{} Premièrement, Git analyse les différents changement en faisant des
 ``diff'', qui consistent à regarder le différences entre un même fichier à des
 versions différentes. Ainsi, afin de clarifier un peu le tout, il est conseillé
-de préférer du texte dur plusieurs ligne que du texte sur une seule ligne.
+de préférer du texte sur plusieurs ligne que du texte sur une seule ligne.
 
 \paragraph{} Ensuite, afin de pouvoir mieux gérer son dépôt mais aussi de mieux
 gérer la stabilité et la fonctionnalité du projet, il est aussi conseillé de
@@ -230,8 +230,10 @@ d'erreurs mais aussi le travail avec les branches que l'on verra plus tard.
 % http://git-scm.com <- référence
 % http://rogerdudler.github.io/git-guide/
 % http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide#320140
+% https://www.atlassian.com/git/
 %
 %TODO
 % Explain why `git init --bare' if on own server
 \end{document}
+
 % vim: spell : spelllang=fr
